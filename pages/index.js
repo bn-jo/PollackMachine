@@ -105,7 +105,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Pollack Machine</title>
+        <title>Pollock Machine</title>
       
         <link rel="icon" href="/images/favicon.ico" />
         <link
@@ -133,7 +133,7 @@ export default function Home() {
       <center> <div className="absolute transform -translate-x-1/2 top-8 left-1/2 lg:translate-x-0 lg:transform-none lg:static">
           <h1 className="uppercase font-damn page-title lg:inline">
             <a
-              href="#"
+              href="https://en.wikipedia.org/wiki/Jackson_Pollock"
               aria-label=""
             >
               <motion.span
@@ -142,7 +142,7 @@ export default function Home() {
                 transition={{ duration: 0.4, ease: "circOut" }}
                 className="inline-block"
               >
-                Pollack
+                Pollock
               </motion.span>
               <br />
               <motion.span
@@ -196,7 +196,7 @@ export default function Home() {
                 type="file"
                 name="myImage"
                 accept=".jpg, .png"
-                aria-label="Choose an image to Pollack Machine"
+                aria-label="Choose an image to Pollock Machine"
                 className="custom-input"
                 onChange={(event) => {
                   if (event.target.files[0].type.match(/image.*/)) {
