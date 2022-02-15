@@ -24,7 +24,7 @@ body {
 
 .page-title {
  
-  font-size: 12rem;
+  font-size: 8rem;
   /* line-height: normal; */
   line-height: 1.1;
 }
@@ -115,14 +115,14 @@ body {
 
   .page-title {
     align-items:center;
-    font-size: 5rem;
+    font-size: 8rem;
   }
 
  
 
   .canvas-container canvas {
-    max-width: 900px;
-    max-height: 700px;
+    max-width: 600px;
+    max-height: 400px;
     padding: 0;
   }
 }
@@ -131,7 +131,7 @@ body {
   align-content:center;
 }
 
-@media screen and (max-height: 900px) and (min-width: 768px) {
+@media screen and (max-height: 400px) and (min-width: 668px) {
   .canvas-container canvas {
     margin-top: 20%;
     max-height: 400px;
