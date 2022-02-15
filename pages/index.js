@@ -105,7 +105,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Pollock Machine</title>
+        <title>Pollack Machine</title>
       
         <link rel="icon" href="/images/favicon.ico" />
         <link
@@ -142,7 +142,7 @@ export default function Home() {
                 transition={{ duration: 0.4, ease: "circOut" }}
                 className="inline-block"
               >
-                Pollock
+                Pollack
               </motion.span>
               <br />
               <motion.span
@@ -196,7 +196,7 @@ export default function Home() {
                 type="file"
                 name="myImage"
                 accept=".jpg, .png"
-                aria-label="Choose an image to Pollock Machine"
+                aria-label="Choose an image to Pollack Machine"
                 className="custom-input"
                 onChange={(event) => {
                   if (event.target.files[0].type.match(/image.*/)) {
