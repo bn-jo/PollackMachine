@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "Damn";
+  src: url("/fonts/DAMN.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: url("/images/js-gif-bg.gif");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  
+ }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::selection {
+  background-color: black;
+  color: white;
+}
+
+.page-title {
+ 
+  font-size: 12rem;
+  /* line-height: normal; */
+  line-height: 1.1;
+}
+
+.page-title a {
+  background: url("/images/js-gif-bg.gif");
+  background-clip: none;
+  -webkit-background-clip: text;
+  color: rgba(84, 141, 238,30);
+}
+
+.page-title a:focus-visible {
+  text-decoration: underline;
+  outline: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.pollock-portrait {
+  display: none;
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+}
+
+.page-title a:hover {
+  color: rgba(159, 177, 250, 0.659);
+}
+
+.page-title:hover + .left-portrait {
+  transform: rotate(25deg) translateX(180px);
+}
+
+.custom-input:hover + .right-portrait {
+  transform: rotate(-25deg) translateX(-180px);
+}
+
+.canvas-container canvas {
+  margin-top: 20%;
+  max-width: 100%;
+  max-height: 300px;
+  padding: 0 1rem;
+  object-fit: contain;
+  object-position: center;
+}
+
+.custom-input {
+  width: 150px;
+  color: transparent;
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+  appearance: none;
+}
+
+.custom-input::-webkit-file-upload-button {
+  visibility: hidden;
+  
+}
+
+.custom-input::before {
+
+  width: 150px;
+  text-align: center;
+  padding: 1rem;
+  content: "Choose Image";
+  display: inline-block;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+}
+
+.custom-input:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-height: 667px) and (max-width: 768px) {
+  .canvas-container canvas {
+    max-height: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+
+  .page-title {
+    align-items:center;
+    font-size: 10rem;
+  }
+
+ 
+
+  .canvas-container canvas {
+    max-width: 900px;
+    max-height: 700px;
+    padding: 0;
+  }
+}
+.mains {
+  margin-top: 5%;
+  align-content:center;
+}
+
+@media screen and (max-height: 900px) and (min-width: 768px) {
+  .canvas-container canvas {
+    margin-top: 20%;
+    max-height: 400px;
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-height: 750px) and (min-width: 768px) {
+  .canvas-container canvas {
+    max-height: 300px;
+  }
+  .bench {
+    width: 12rem !important;
+  }
+}
+
+
+
+@-webkit-keyframes steam{
+  0%{height: 0px;}
+  100%{height: 6px;}
+}
+@-moz-keyframes steam{
+  0%{height: 0px}
+  100%{height: 6px;}
+}
+@keyframes steam{
+  0%{height: 0px}
+  100%{height: 6px;}
+}
+
+
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #29d;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  opacity: 3;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

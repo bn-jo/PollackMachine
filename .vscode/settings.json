@@ -1,0 +1,8 @@
+{
+    "files.exclude": {
+        "/usr/local/bin": true
+    },
+    "search.exclude": {
+        "/usr/local/bin": true
+    }
+}
